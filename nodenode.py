@@ -31,8 +31,8 @@ walker = BiasedRandomWalk(
     G,
     n=walk_number,
     length=walk_length,
-    p=0.5,  # defines probability, 1/p, of returning to source node
-    q=2.0,  # defines probability, 1/q, for moving to a node away from the source node
+    p=1,  # defines probability, 1/p, of returning to source node
+    q=1,  # defines probability, 1/q, for moving to a node away from the source node
 )
 unsupervised_samples = UnsupervisedSampler(G, nodes=list(G.nodes()), walker=walker)
 
